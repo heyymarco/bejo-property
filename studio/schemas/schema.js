@@ -12,6 +12,7 @@ import author from './author'
 import comment from './comment'
 import singletonSiteInfo from './singletonSiteInfo'
 import page from './page'
+import rumah from './rumah'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,8 @@ export default createSchema({
     // in the studio.
     singletonSiteInfo,
     page,
+
+    rumah,
     
     post,
     author,
