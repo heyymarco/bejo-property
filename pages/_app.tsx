@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     return (
         <SiteContext.Provider value={pageProps.siteInfo}>
             <Navbar theme='primary'
-                logo={<img src={imageBuilder(siteInfo.logo).height(30).url() as string} alt={siteInfo.siteName} />}
+                logo={!!siteInfo?.logo && <img src={imageBuilder(siteInfo.logo).height(30).url() as string} alt={siteInfo.siteName} />}
             >
                 {
                     pageProps.pages.map((page: any, index: number) =>
