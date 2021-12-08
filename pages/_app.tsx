@@ -20,8 +20,6 @@ interface PageProps {
     pages     ?: any
   }
 const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps & PageProps) => {
-    const w = typeof(window) !== 'undefined' ? window : undefined;
-    if (w) (w as any).Link = <Link href='/bleh'>test</Link>;
     return (
         <SiteContext.Provider value={siteInfo}>
             <Navbar theme='primary'
