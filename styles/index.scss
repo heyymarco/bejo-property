@@ -3,6 +3,12 @@ body {
     padding: 0;
 }
 
+a:any-link {
+    color: unset;
+    cursor: unset;
+    text-decoration: unset;
+}
+
 main>header {
     color: var(--col-light) !important;
     background-size: cover !important;
