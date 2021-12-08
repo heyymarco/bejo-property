@@ -17,16 +17,15 @@ interface PageProps {
     Component?: React.ReactElement
     pageProps?: any
   }
-const MyApp = ({ Component, pageProps }: AppProps) => {
-    const siteInfo = pageProps.siteInfo;
-
+const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps) => {
+    console.log('Link = ', Link);
     return (
-        <SiteContext.Provider value={pageProps.siteInfo}>
+        <SiteContext.Provider value={siteInfo}>
             <Navbar theme='primary'
                 logo={!!siteInfo?.logo && <img src={imageBuilder(siteInfo.logo).height(30).url() as string} alt={siteInfo.siteName} />}
             >
                 {
-                    pageProps.pages?.map((page: any, index: number) =>
+                    pages?.map((page: any, index: number) =>
                         <NavbarMenu key={index}>
                             <Link href={`/${page.slug}`}>
                                 {page.tab}
@@ -49,10 +48,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 MyApp.getInitialProps = async (ctx: AppContext) => {
     const appProps = await App.getInitialProps(ctx);
 
-    return { ...appProps, pageProps: {
-        siteInfo: await getSiteInfo(),
-        pages: await getPages() ?? []
-    }};
+    return { ...appProps,
+        siteInfo : await getSiteInfo(),
+        pages    : await getPages()
+    };
 }
 
 export default MyApp
