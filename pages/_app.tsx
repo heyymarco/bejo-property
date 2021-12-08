@@ -51,7 +51,7 @@ MyApp.getInitialProps = async (ctx: AppContext) => {
 
     return { ...appProps, pageProps: {
         siteInfo: await getSiteInfo(),
-        pages: await getPages()
+        pages: await getPages() ?? []
     }};
 }
 
