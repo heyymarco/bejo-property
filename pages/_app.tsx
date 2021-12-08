@@ -14,10 +14,12 @@ import Link from 'next/link'
 export const SiteContext = createContext({})
 
 interface PageProps {
-    Component?: React.ReactElement
-    pageProps?: any
+    Component ?: React.ReactElement
+    pageProps ?: any
+    siteInfo  ?: any
+    pages     ?: any
   }
-const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps) => {
+const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps & PageProps) => {
     console.log('Link = ', Link);
     return (
         <SiteContext.Provider value={siteInfo}>
