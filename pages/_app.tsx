@@ -26,7 +26,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
                 logo={!!siteInfo?.logo && <img src={imageBuilder(siteInfo.logo).height(30).url() as string} alt={siteInfo.siteName} />}
             >
                 {
-                    pageProps.pages.map((page: any, index: number) =>
+                    pageProps.pages?.map((page: any, index: number) =>
                         <NavbarMenu key={index}>
                             <Link href={`/${page.slug}`}>
                                 {page.tab}
