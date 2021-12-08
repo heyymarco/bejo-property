@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main>header {
+    color: var(--col-light) !important;
+    background-size: cover !important;
+    min-height: 100px;
+    margin-inline: calc(0px - var(--con-paddingInline));
+    margin-block-start: calc(0px - var(--con-paddingBlock));
+    margin-block-end: var(--con-paddingBlock);
+}
