@@ -12,8 +12,14 @@
     "postinstall": "lerna bootstrap"
   },
   "dependencies": {
+    "@nodestrap/button-icon": "^4.0.2",
+    "@nodestrap/check": "^4.0.2",
+    "@nodestrap/collapse": "^4.0.2",
     "@nodestrap/container": "^4.0.3",
     "@nodestrap/content": "^4.0.4",
+    "@nodestrap/group": "^4.0.2",
+    "@nodestrap/icon": "^4.0.5",
+    "@nodestrap/input": "^4.0.2",
     "@nodestrap/navbar": "^4.0.7",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/client": "^2.8.0",

@@ -3,17 +3,69 @@ body {
     padding: 0;
 }
 
+html, body, #__next {
+    block-size: -webkit-fill-available;
+    block-size: fill-available;
+}
+#__next {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+
+    &>header {
+        z-index: 1;
+        --con-paddingBlock: 0px;
+    }
+    &>main {
+        flex: 1 0; // growable, unshrinkable
+    }
+}
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+
+    padding-block: 1rem;
+}
+#search {
+    flex: 1 1; // growable, shrinkable
+
+    &>:first-child {
+        flex: 1 1; // growable, shrinkable
+
+        & input {
+            inline-size: 0;
+        }
+    }
+    &>:not(:first-child) {
+        flex: 0 0; // ungrowable, unshrinkable
+
+        & button {
+            flex-wrap: nowrap;
+        }
+    }
+}
+#searchType {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
 // a:any-link {
 //     color: unset;
 //     cursor: unset;
 //     text-decoration: unset;
 // }
 
-main>header {
+main>article>header {
     color: var(--col-light) !important;
     background-size: cover !important;
     min-height: 100px;
-    margin-inline: calc(0px - var(--con-paddingInline));
-    margin-block-start: calc(0px - var(--con-paddingBlock));
-    margin-block-end: var(--con-paddingBlock);
+
+    display         : flex;
+    flex-direction  : row;
+    justify-content : flex-start;
+    align-items     : center;
 }
