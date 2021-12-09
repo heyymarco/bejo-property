@@ -4,8 +4,8 @@ body {
 }
 
 html, body, #__next {
-    block-size: -webkit-fill-available !important;
-    block-size: fill-available !important;
+    height: -webkit-fill-available !important;
+    height: fill-available !important;
 }
 #__next {
     display: flex;
