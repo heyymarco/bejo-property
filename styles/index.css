@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-html,body,#__next {
+:is(html, body, #__next) {
     height: -webkit-fill-available !important;
     height: fill-available !important;
 }
