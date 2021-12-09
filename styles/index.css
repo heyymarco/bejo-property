@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-}
-
-:is(html, body, #__next) {
-    height: -webkit-fill-available !important;
-    height: fill-available !important;
-}
 #__next {
     display: flex;
     flex-direction: column;

@@ -13,6 +13,26 @@ import { Check } from '@nodestrap/check'
 import { imageBuilder } from '../lib/sanity'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { globalDef, rule, layout } from '@cssfn/cssfn'
+import { createUseSheet } from '@cssfn/react-cssfn'
+
+
+
+const useGlobalSheet = createUseSheet(() => [
+    globalDef([
+        rule('body', [
+            layout({
+                margin: 0,
+                padding: 0,
+            }),
+        ]),
+        rule(['html', 'body', '#__next'], [
+            layout({
+                blockSize: 'fill-available',
+            })
+        ]),
+    ]),
+]);
 
 
 
@@ -25,9 +45,11 @@ interface PageProps {
     pages     ?: any
   }
 const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps & PageProps) => {
+    useGlobalSheet();
+    
+    
     const router = useRouter();
     const expandDashboard = ['', '/'].includes(router.pathname);
-    console.log(router.pathname)
     
     
     return (
