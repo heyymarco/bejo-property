@@ -49,8 +49,8 @@ const MyApp = ({ Component, pageProps, siteInfo, pages }: AppProps & PageProps) 
                 <Collapse classes={['fill']} active={expandDashboard} nude={true}>
                     <Container id='dashboard' theme='primary' mild={true}>
                         <Group id='search'>
-                            <SearchInput placeholder='jual rumah dekat merapiview' enableValidation={false} />
-                            <Button icon='search'>cari</Button>
+                            <SearchInput id='searchInput' placeholder='jual rumah dekat merapiview' enableValidation={false} />
+                            <Button icon='search' id='searchBtn'>cari</Button>
                         </Group>
                         <div id='searchType'>
                             <Check enableValidation={false} theme='primary'>tanah</Check>

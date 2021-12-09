@@ -35,13 +35,13 @@ html, body, #__next {
 #search>:first-child {
     flex: 1 1;
 }
-#search>:first-child input {
+#searchInput>input {
     inline-size: 0px !important;
 }
 #search>:not(:first-child) {
     flex: 0 0;
 }
-#search>:not(:first-child) button {
+#searchBtn {
     flex-wrap: nowrap !important;
 }
 #searchType {
