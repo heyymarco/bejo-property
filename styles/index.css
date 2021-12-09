@@ -14,7 +14,7 @@ html, body, #__next {
     align-items: stretch;
 
 }
-#__next>header {
+#header {
     z-index: 1;
     --con-paddingBlock: 0px;
 }
