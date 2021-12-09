@@ -3,7 +3,7 @@ body {
     padding: 0;
 }
 
-html, body, #__next {
+html,body,#__next {
     height: -webkit-fill-available !important;
     height: fill-available !important;
 }
@@ -12,7 +12,6 @@ html, body, #__next {
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-
 }
 #header {
     z-index: 1;
