@@ -36,14 +36,14 @@ html, body, #__next {
         flex: 1 1; // growable, shrinkable
 
         & input {
-            inline-size: 0;
+            inline-size: 0px !important;
         }
     }
     &>:not(:first-child) {
         flex: 0 0; // ungrowable, unshrinkable
 
         & button {
-            flex-wrap: nowrap;
+            flex-wrap: nowrap !important;
         }
     }
 }
