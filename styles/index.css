@@ -13,13 +13,13 @@ html, body, #__next {
     justify-content: stretch;
     align-items: stretch;
 
-    &>header {
-        z-index: 1;
-        --con-paddingBlock: 0px;
-    }
-    &>main {
-        flex: 1 0; // growable, unshrinkable
-    }
+}
+#__next>header {
+    z-index: 1;
+    --con-paddingBlock: 0px;
+}
+#__next>main {
+    flex: 1 0;
 }
 #dashboard {
     display: flex;
@@ -30,34 +30,25 @@ html, body, #__next {
     padding-block: 1rem;
 }
 #search {
-    flex: 1 1; // growable, shrinkable
-
-    &>:first-child {
-        flex: 1 1; // growable, shrinkable
-
-        & input {
-            inline-size: 0px !important;
-        }
-    }
-    &>:not(:first-child) {
-        flex: 0 0; // ungrowable, unshrinkable
-
-        &>button, & button {
-            flex-wrap: nowrap !important;
-        }
-    }
+    flex: 1 1;
+}
+#search>:first-child {
+    flex: 1 1;
+}
+#search>:first-child input {
+    inline-size: 0px !important;
+}
+#search>:not(:first-child) {
+    flex: 0 0;
+}
+#search>:not(:first-child) button {
+    flex-wrap: nowrap !important;
 }
 #searchType {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
 }
-
-// a:any-link {
-//     color: unset;
-//     cursor: unset;
-//     text-decoration: unset;
-// }
 
 main>article>header {
     color: var(--col-light) !important;

@@ -1,4 +1,4 @@
-import '../styles/index.scss'
+import '../styles/index.css'
 import { default as React, createContext } from "react"
 import type { AppContext, AppProps } from 'next/app'
 import App from "next/app"
