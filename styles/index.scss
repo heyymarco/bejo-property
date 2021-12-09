@@ -4,8 +4,8 @@ body {
 }
 
 html, body, #__next {
-    block-size: -webkit-fill-available;
-    block-size: fill-available;
+    block-size: -webkit-fill-available !important;
+    block-size: fill-available !important;
 }
 #__next {
     display: flex;
@@ -42,7 +42,7 @@ html, body, #__next {
     &>:not(:first-child) {
         flex: 0 0; // ungrowable, unshrinkable
 
-        & button {
+        &>button, & button {
             flex-wrap: nowrap !important;
         }
     }
